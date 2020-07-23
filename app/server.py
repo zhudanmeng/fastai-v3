@@ -9,15 +9,16 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1A-JwVUB0gYcs5sMPQeCZUri33AMmwntZ'
-export_file_name = 'export.pkl'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1qkf52rlc-jIiNLXFOI1GYOhn0OxNdWpV'
+export_file_name = 'Nathaniel.pkl'
 
-classes = ['Abyssinian', 'Bengal', 'Birman', 'Bombay', 'British_Shorthair', 'Egyptian_Mau', 'Maine_Coon',
-'Persian', 'Ragdoll', 'Russian_Blue', 'Siamese', 'Sphynx', 'american_bulldog',
-'american_pit_bull_terrier', 'basset_hound', 'beagle', 'boxer', 'chihuahua', 'english_cocker_spaniel',
-'english_setter', 'german_shorthaired', 'great_pyrenees', 'havanese', 'japanese_chin', 'keeshond',
-'leonberger', 'miniature_pinscher', 'newfoundland', 'pomeranian', 'pug', 'saint_bernard', 'samoyed',
-'scottish_terrier', 'shiba_inu', 'staffordshire_bull_terrier', 'wheaten_terrier', 'yorkshire_terrier']
+classes = ['Boston Bruins',
+'Montreal Canadiens',
+'Pittsburgh Penguins',
+'Tampa Bay Lightning',
+'Toronto Maple Leafs',
+'Winnipeg Jets'
+]
 path = Path(__file__).parent
 
 app = Starlette()
@@ -30,7 +31,7 @@ async def download_file(url, dest):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             data = await response.read()
-            with open(dest, 'wb') as f:
+            with open(dest, 'wb', encoding="utf8") as f:
                 f.write(data)
 
 
