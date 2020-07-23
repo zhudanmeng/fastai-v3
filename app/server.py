@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1qkf52rlc-jIiNLXFOI1GYOhn0OxNdWpV'
+export_file_url = ''
 export_file_name = 'Nathaniel.pkl'
 
 classes = ['Boston Bruins',
@@ -20,6 +20,7 @@ classes = ['Boston Bruins',
 'Winnipeg Jets'
 ]
 path = Path(__file__).parent
+
 
 app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
