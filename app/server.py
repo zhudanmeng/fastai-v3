@@ -10,14 +10,43 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 export_file_url = ''
-export_file_name = 'Nathaniel.pkl'
+export_file_name = 'Olivia.pkl'
 
-classes = ['Boston Bruins',
-'Montreal Canadiens',
-'Pittsburgh Penguins',
-'Tampa Bay Lightning',
-'Toronto Maple Leafs',
-'Winnipeg Jets'
+classes = ['Abyssinian',
+'Bengal',
+'Bombay',
+'Birman',
+'British Shorthair',
+'Maine Coon',
+'Persian',
+'Egyptian Mau',
+'Ragdoll',
+'Russian Blue',
+'Siamese',
+'Boxer',
+'Keeshond',
+'Havanese',
+'Basset Hound',
+'English Setter',
+'Miniature Pinscher',
+'Chihuahua',
+'Great Pyrenees',
+'Beagle',
+'Ragdoll',
+'English Cocker Spaniel',
+'New Found Land',
+'Pomeranian',
+'Leonberger',
+'American Pit Bull Terrier',
+'Wheaten Terrier',
+'Japanese Chin',
+'Samyod',
+'Scottish Terrier',
+'Shiba Inu',
+'Pug',
+'Saint Bernard',
+'American Bulldog',
+'Yorkshire Terrier'
 ]
 path = Path(__file__).parent
 
